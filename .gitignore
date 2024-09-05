@@ -1,0 +1,32 @@
+# Ignore logs
+logs/
+*.log
+
+# Ignore build files and executables
+*.exe
+*.out
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.dylib
+shaderlab  # Name of your executable
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore generated CMake files if CMake is used in the future
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+
+# Ignore other IDE-specific files (optional)
+.idea/
+*.iml

@@ -12,7 +12,7 @@ int main() {
     logger.log(LogLevel::INFO, "Application started.");
 
     // Create window
-    Window window(800, 600, "ShaderLab");
+    Window window(800, 600, "ProjectName");
 
     // Initialize renderer
     Renderer renderer;

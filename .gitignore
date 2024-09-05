@@ -11,10 +11,7 @@ logs/
 *.dll
 *.a
 *.dylib
-shaderlab  # Name of your executable
-
-# Ignore VSCode settings
-.vscode/
+ProjectName  # Generic placeholder for executable
 
 # Ignore OS-specific files
 .DS_Store

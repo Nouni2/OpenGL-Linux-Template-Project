@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "g++ -I./include $(find ./src -name \"*.cpp\") main.cpp -o ProjectName -lGLEW -lglfw -lGL -std=c++17"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Task for building the ProjectName project."
+        }
+    ]
+}

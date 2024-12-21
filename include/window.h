@@ -13,6 +13,9 @@ public:
     void swapBuffers() const;
     bool shouldClose() const;
 
+    // Getter for the GLFW window used by imgui
+    GLFWwindow* getGLFWHandle() const;
+
 private:
     GLFWwindow* window;
 };

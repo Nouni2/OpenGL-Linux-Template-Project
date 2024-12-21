@@ -7,7 +7,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "g++ -I./include $(find ./src -name \"*.cpp\") main.cpp -o ProjectName -lGLEW -lglfw -lGL -std=c++17"
+                "g++ -I./include -I./include/imgui $(find ./src -name \"*.cpp\") main.cpp -o ProjectName -lGLEW -lglfw -lGL -std=c++17"
             ],
             "group": {
                 "kind": "build",

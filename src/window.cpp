@@ -47,3 +47,7 @@ void Window::swapBuffers() const {
 bool Window::shouldClose() const {
     return glfwWindowShouldClose(window);
 }
+
+GLFWwindow* Window::getGLFWHandle() const {
+    return window;
+}

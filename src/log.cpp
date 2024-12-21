@@ -1,14 +1,21 @@
 #include "log.h"
-
+#include <filesystem> // For file existence checks and creating directories
 
 // Initialize the logger instance
 Logger logger("logs/debug.log");
 
 // Constructor that opens the log file and initializes log level names
 Logger::Logger(const std::string& filename) {
-    logFile.open(filename, std::ios::out);
+    // Ensure the directory for the log file exists
+    auto directory = std::filesystem::path(filename).parent_path();
+    if (!directory.empty() && !std::filesystem::exists(directory)) {
+        std::filesystem::create_directories(directory);
+    }
+
+    // Open the log file, creating it if it doesn't exist
+    logFile.open(filename, std::ios::out); 
     if (!logFile.is_open()) {
-        std::cerr << "Failed to open log file: " << filename << std::endl;
+        std::cerr << "Failed to open or create log file: " << filename << std::endl;
     }
 
     // Initialize log level name mappings
